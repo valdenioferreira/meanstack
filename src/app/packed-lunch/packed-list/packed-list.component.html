@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-success">Nova Marmita</button>
+  </div>
+</div>
+
+<div class="row-one">
+  <div class="col-12">
+    <a *ngFor="let packed of packeds" href="#" class="list-group-item clearfix">
+      <div class="float-start">
+        <h4 class="list-group-item-heading">{{ packed.name }}</h4>
+        <p class="list-group-item-text">{{ packed.description }}</p>
+      </div>
+
+      <div class="float-end">
+        <img
+          [src]="packed.imagePath"
+          alt=""
+          class="img-responsive"
+          style="max-height: 100px; border-radius: 10px"
+        />
+      </div>
+    </a>
+    <!--<app-packed-item></app-packed-item>-->
+  </div>
+</div>
